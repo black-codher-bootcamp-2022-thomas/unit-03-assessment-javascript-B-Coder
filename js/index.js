@@ -1,14 +1,5 @@
-// import { dates } from "./data.js";
-// console.log('This is not working',dates)
-// const timeline = document.querySelector(".timeline");
-// console.log('timeline', timeline)
-// function createCard (){
-//     const cardContainer = document.createElement("div");
-//     cardContainer.classList.add('timeline-item')
-//     timeline.appendChild(cardContainer)
-// }
-createCard()
-import { dates } from ".data.js";
+import { dates } from "./data.js";
+/* ------> Correct data I thought  <------ */
 const timeline = document.querySelector(".timeline");
 function getCard(index) {
   const { date, title, image, fullDescription } = dates[index];
@@ -67,18 +58,17 @@ dates.map(({ date, title, summary }, index) => {
   timelineItemTitle.setAttribute("class", "timeline-item-title");
   timelineItemDate.setAttribute("class", "timeline-item-date");
   timelineItemSummary.setAttribute("class", "timeline-item-summary");
-  timelineItemMoreInfoText.setAttribute("class", "timeline-item-more-info");
   timelineItemMoreInfo.setAttribute("data-index", index);
   circle.setAttribute("class", "timeline-circle");
   timelineItemTitle.appendChild(titleText);
   timelineItemDate.appendChild(dateText);
   timelineItemSummary.appendChild(summaryText);
-  timelineItemMoreInfoText.appendChild(modalContainer);
-  circle.appendChild(date);
+  timelineItemMoreInfo.appendChild(timelineItemMoreInfoText);
+  circle.appendChild(dateText);
   timelineItem.appendChild(timelineItemTitle);
   timelineItem.appendChild(timelineItemDate);
   timelineItem.appendChild(timelineItemSummary);
-  timelineItem.appendChild(timelineItemMoreInfoText);
+  timelineItem.appendChild(timelineItemMoreInfo);
   timelineItem.appendChild(circle);
 timelineItemMoreInfo.addEventListener(
     "click",
@@ -90,4 +80,4 @@ timelineItemMoreInfo.addEventListener(
     false
   );
   timeline.appendChild(timelineItem);
-}); (edited) 
+});
