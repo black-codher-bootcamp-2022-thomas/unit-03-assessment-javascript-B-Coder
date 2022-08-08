@@ -1,4 +1,4 @@
-[TODO: Replace with your Netflify status badge]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eef87673-dd62-43ea-bc33-0f8f46517e3c/deploy-status)](https://app.netlify.com/sites/mayme-bakery/deploys)
 
 # JavaScript Assessment
 
